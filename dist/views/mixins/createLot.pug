@@ -1,0 +1,20 @@
+mixin createLot(lot = {})
+    form.new-product(action=`/new-lot${lot.id ? '/' + lot.id : ''}` method='POST')
+        .form-group
+            label(for="") Codigo
+            input.form-control(type="text", name="code" value= lot.code placeholder="Ingresa un codigo" required)
+        .form-group
+            label(for="") Fecha
+            input.form-control(type="date", name="date" value= lot.date placeholder="Ingresa una fecha valida" required)
+        .form-group
+            label(for="") Cantidad
+            input.form-control(type="number", name="quantity" value= lot.quantity placeholder="Ingresa la cantidad" required)
+        .form-group
+            label(for="") Productos
+            select.form-control(name="product", value= lot.product required)
+                if products.length
+                    option(hidden value='') Selecciona un producto
+                    each prod in products
+                        option(value= prod.id) #{prod.code} - #{prod.name}
+        .form-group
+            input(type="submit" value=`${lot.name ? 'Guardar' : 'Agregar'}` class="btn btn-blue-mowin")

@@ -1,0 +1,16 @@
+.btn-blue-mowin {
+    background-color: #1d52ba;
+    color: #FFF;
+    font-weight: bold;
+}
+.btn-blue-mowin:hover {
+    background-color: #1d52ba;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.alert-error {
+    color: #721c24;
+    background-color: #F8D7DA;
+    border-color: #F5C6CB;
+}

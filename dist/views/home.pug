@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        include partials/head
+    body.container-fluid
+
+        include shareds/header
+
+        if product
+            iframe(src=product.link, frameborder="0", id="iframe-product-mowin")
+        else
+            iframe(src="http://www.mowin-tech.com/", frameborder="0", id="iframe-product-mowin")
+
+        include partials/scripts
+        

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        include partials/head
+    body
+        header.bar
+            h1 Lotes
+            a(href="/log-out") Cerrar Sesión
+        
+        main.content
+            aside.lot-content
+                //- Lotes
+                .panel.create-lot
+                    a(href="/new-lot" class="button-mowin border border-white") Nuevo Lote
+                .panel.lot-list
+                    h2 Lotes
+                    ul#lots.lots
+                        if (lots.length)
+                            each lot in lots
+                                li
+                                    a(href=`#`)= lot.code
+                
+                //- Productos
+                .panel.create-lot
+                    a(href="/new-product" class="button-mowin border border-white") Nuevo Producto
+                .panel.lot-list
+                    h2 Productos
+                    ul#lots.lots
+                        if (products.length)
+                            each product in products
+                                li
+                                    a(href=`/products/${product.id}`)= product.name
+            
+            block content

@@ -1,0 +1,7 @@
+@import "./font-euclid.css";
+
+body {
+    --bg-blue: #1d52ba;
+    --text-white: #FFF;
+    font-family: 'euclid_flextrial', Arial, Helvetica, sans-serif !important;
+}

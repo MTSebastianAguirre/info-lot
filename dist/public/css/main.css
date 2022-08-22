@@ -1,0 +1,111 @@
+.main-content {
+    flex: 1;
+    padding: 1rem;
+    overflow: scroll;
+}
+.main-content h1,
+.main-content h2 {
+    text-align: center;
+}
+.main-content h1 {
+    font-size: 1.8rem;
+}
+.main-content h2 {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+}
+.main-content h1 span {
+    font-weight: 400;
+}
+
+.bar {
+    background-color: #1d52ba;
+    padding: 1rem;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bar h1 {
+    color: white;
+    margin:0;
+    font-size: 1.4rem;
+}
+.bar a {
+    color: white;
+    text-decoration: none;
+}
+
+.content {
+    display: flex;
+    height: calc( 100vh - 60px);
+}
+
+.lot-content {
+    height: 100%;
+    max-width: 300px;
+    background-color: #1d52ba;
+    padding-top: 1rem;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.panel {
+    padding: 1rem 0;
+    margin: 1rem;
+}
+.panel a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+.panel h2 {
+    color: #ff7500;
+    font-weight: 900;
+    text-align: center;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.create-lot i {
+    margin-left: 1rem;
+}
+.create-lot a {
+    color: #fff;
+}
+
+.lot-list ul{
+    list-style: none;
+    padding: 1.5rem 0 0 0;
+    margin: 0;
+}
+.lot-list ul li {
+    margin-bottom: 1rem;
+}
+.lot-list ul li a:hover {
+    color: #ff7500;
+}
+
+.new-product {
+    max-width: 800px;
+    width: 90%;
+    background-color: #607D8B;
+    margin: 0 auto;
+    padding: 2rem;
+    color: white;
+    transition: background-color .5s ease-in-out;
+}
+
+.no-lot {
+    background-color: var(--bg-blue);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.no-lot h1 {
+    color: var(--text-white);
+    text-align: center;
+}

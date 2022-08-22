@@ -1,0 +1,11 @@
+.info-lot {
+    padding: 15px 0;
+    background-color: #1d52ba;
+}
+
+.info-lot p {
+    margin-bottom: 0;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 0 15px;
+}

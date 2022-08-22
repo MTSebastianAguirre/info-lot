@@ -1,0 +1,12 @@
+extends layout
+
+include mixins/createProduct
+
+block content
+    .main-content
+        h1 #{namePage}
+        
+        if errors
+            each error in errors
+                .alert.alert-danger= error.text
+        +createProduct(product)

@@ -1,0 +1,13 @@
+mixin createProduct(product = {})
+    form.new-product(action=`/new-product${product.id ? '/' + product.id : ''}` method='POST')
+        .form-group
+            label(for="") Codigo
+            input.form-control(type="text", name="code" value= product.code placeholder="Ingresa un codigo" required)
+        .form-group
+            label(for="") Nombre
+            input.form-control(type="text", name="name" value= product.name placeholder="Ingresa un Nombre" required)
+        .form-group
+            label(for="") Link
+            input.form-control(type="text", name="link" value= product.link placeholder="Ingresa el link del producto" required)
+        .form-group
+            input(type="submit" value=`${product.name ? 'Guardar' : 'Agregar'}` class="btn btn-blue-mowin")

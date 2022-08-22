@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        include partials/head
+    body.container(class="login")
+        .content-form
+            h1 #{namePage}
+
+            if locals.message
+                each category in Object.keys(locals.message)
+                    each error in message[category]
+                        .alert(class=`alert-${category} mx-auto wm-650 w-90`) #{error}
+
+            form#form.box.box-login(action="/log-in", method="POST")
+                .form-group
+                    label(for="") Correo
+                    input.form-control(type="email", name="email" value= email placeholder="Ingresa correo registrado")
+                .form-group
+                    label(for="") Contraseña
+                    input.form-control(type="password" name="password" value= password placeholder="Contraseña")
+                .send
+                    input(type="submit", value="Iniciar Sesión" class="btn btn-blue-mowin")
+                .actions
+                    a(href="/create-account") Crear Cuenta

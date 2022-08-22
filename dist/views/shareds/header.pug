@@ -1,0 +1,10 @@
+header(class="info-lot my-1")
+    if lot
+        p El dispositivo fue fabricado el dia 
+            strong #{lot.sDate}
+        p Dentro del lote 
+            strong #{lot.code}
+    else
+        p El lote 
+            strong #{l}
+            span  no esta registrado
